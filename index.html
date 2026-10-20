@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como usar o sistema de nutrição?</title>
+    
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff; /* Fundo branco conforme solicitado */
+            color: #333333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        /* Estilo da barra de pesquisa */
+        .search-container {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 15px 20px 15px 45px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .search-container input:focus {
+            border-color: #3498db;
+        }
+
+        /* Ícone de Lupa simples usando emoji/símbolo */
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #888;
+        }
+
+        /* Estilos da lista de vídeos (Acordeão) */
+        .video-item {
+            margin-bottom: 15px;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .accordion-header {
+            width: 100%;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 18px 20px;
+            text-align: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background-color: #f1f1f1;
+        }
+
+        .accordion-header.active {
+            background-color: #eef6fc;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        /* Conteúdo do vídeo que fica escondido */
+        .accordion-content {
+            display: none;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        /* Container para manter o iframe do Youtube responsivo */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .legenda {
+            margin-top: 15px;
+            font-size: 15px;
+            color: #555;
+            background-color: #fcfcfc;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Como usar o sistema de nutrição?</h1>
+
+    <!-- Barra de Pesquisa (Lupa) -->
+    <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Pesquisar por função, palavra-chave ou título do vídeo...">
+    </div>
+
+    <!-- Lista de Vídeos -->
+    <div id="videoList">
+
+        <!-- ========================================== -->
+        <!-- VÍDEO 1: VÍDEO COMPLETO                    -->
+        <!-- ========================================== -->
+        <div class="video-item">
+            <!-- Título que a pessoa clica para abrir -->
+            <button class="accordion-header">
+                <span>como utilizar o sistema - video completo</span>
+                <span class="icon">▼</span>
+            </button>
+            
+            <!-- Conteúdo que aparece ao clicar -->
+            <div class="accordion-content">
+                <div class="video-wrapper">
+                    <!-- Link embed do Youtube -->
+                    <iframe src="https://www.youtube.com/embed/RF2XskHW6zk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="legenda">
+                    <strong>Legenda:</strong> Este é o vídeo completo de apresentação mostrando o passo a passo de todas as funcionalidades básicas do sistema de nutrição.
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- MODELO PARA ADICIONAR NOVOS VÍDEOS FUTUROS -->
+        <!-- ========================================== -->
+        
+        <!-- PARA ADICIONAR UM NOVO VÍDEO, BASTA COPIAR O BLOCO ABAIXO, REMOVER OS COMENTÁRIOS HTML "<!--" e alterar os textos e o link do youtube -->
+        
+        <!-- 
+        <div class="video-item">
+            <button class="accordion-header">
+                <span>COLOQUE O TÍTULO DO NOVO VÍDEO AQUI (Ex: Como cadastrar um paciente)</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="accordion-content">
+                <div class="video-wrapper">
+                    COLE O IFRAME DO YOUTUBE AQUI. PEGUE O CÓDIGO CLICANDO EM "COMPARTILHAR" -> "INCORPORAR" NO YOUTUBE
+                    <iframe src="https://www.youtube.com/embed/COLOQUE_O_ID_DO_VIDEO_AQUI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="legenda">
+                    <strong>Legenda:</strong> Escreva aqui a descrição ou legenda específica sobre o que este vídeo ensina. Você pode usar palavras-chave aqui para facilitar a pesquisa!
+                </div>
+            </div>
+        </div>
+        -->
+
+        <!-- Outro exemplo comentado para facilitar -->
+        <!--
+        <div class="video-item">
+            <button class="accordion-header">
+                <span>Como montar um plano alimentar</span>
+                <span class="icon">▼</span>
+            </button>
+            <div class="accordion-content">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/EXEMPLO_ID" allowfullscreen></iframe>
+                </div>
+                <div class="legenda">
+                    <strong>Legenda:</strong> Aprenda a utilizar a tela de cardápios, adicionar substituições e calcular macronutrientes.
+                </div>
+            </div>
+        </div>
+        -->
+
+    </div>
+
+    <script>
+        // 1. Funcionalidade de Abrir/Fechar os vídeos (Acordeão)
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                // Alterna a classe 'active' para mudar a cor de fundo (opcional)
+                this.classList.toggle('active');
+
+                // Pega o elemento seguinte (que é a div .accordion-content)
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('.icon');
+
+                // Abre ou fecha a div
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                    icon.textContent = "▼"; // Seta para baixo quando fechado
+                } else {
+                    content.style.display = "block";
+                    icon.textContent = "▲"; // Seta para cima quando aberto
+                }
+            });
+        });
+
+        // 2. Funcionalidade da Lupa (Pesquisa)
+        const searchInput = document.getElementById('searchInput');
+        const videoItems = document.querySelectorAll('.video-item');
+
+        searchInput.addEventListener('keyup', function() {
+            // Pega o valor digitado, em letras minúsculas
+            const filter = searchInput.value.toLowerCase();
+
+            // Passa por todos os itens de vídeo da página
+            videoItems.forEach(item => {
+                // Pega o texto do título e da legenda para buscar em ambos
+                const titleText = item.querySelector('.accordion-header span:first-child').textContent.toLowerCase();
+                // Verifica se existe legenda antes de pegar o texto (caso algum não tenha)
+                const legendaEl = item.querySelector('.legenda');
+                const legendaText = legendaEl ? legendaEl.textContent.toLowerCase() : "";
+
+                // Se o texto digitado estiver no título ou na legenda, mostra o vídeo. Senão, esconde.
+                if (titleText.includes(filter) || legendaText.includes(filter)) {
+                    item.style.display = ""; // Volta ao normal (visível)
+                } else {
+                    item.style.display = "none"; // Esconde da lista
+                }
+            });
+        });
+    </script>
+</body>
+</html>
